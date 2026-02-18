@@ -1,0 +1,19 @@
+Name: Candidate M
+Email: candidate.m@example.com
+
+Skills:
+Prompt Engineering, LLM Evaluation, AI Safety,
+Python (Basic), LangChain
+
+Education:
+B.Tech in Information Technology
+
+Projects:
+- Prompt optimization for chatbot responses
+- Hallucination reduction experiments
+
+Experience:
+Prompt Engineering Intern
+
+Gap:
+Weak backend and ML fundamentals

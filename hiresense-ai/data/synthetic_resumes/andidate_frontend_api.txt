@@ -1,0 +1,23 @@
+Name: Candidate AB
+Email: candidate.ab@example.com
+
+Target Role:
+Frontend Developer Intern
+
+Frontend Skills:
+HTML, CSS, JavaScript, React, Axios
+
+Backend Skills:
+Basic REST API consumption
+
+Education:
+B.Tech in Computer Science
+
+Experience:
+Frontend Intern
+- Built React-based UI components
+- Integrated frontend with backend APIs
+- Handled form validation and state management
+
+Expected Result:
+Should rank high for frontend roles, low for backend/AI roles

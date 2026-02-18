@@ -1,0 +1,23 @@
+Name: Candidate AE
+Email: candidate.ae@example.com
+
+Target Role:
+Backend Developer Intern
+
+Backend Skills:
+Python, SQL, PostgreSQL, Database Design
+
+Frontend Skills:
+None
+
+Education:
+B.Tech in Computer Engineering
+
+Experience:
+Backend Intern
+- Designed relational database schemas
+- Wrote optimized SQL queries
+- Worked on backend data validation
+
+Expected Result:
+Should rank high for backend roles

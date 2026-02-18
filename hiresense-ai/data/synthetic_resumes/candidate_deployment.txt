@@ -1,0 +1,19 @@
+Name: Candidate R
+Email: candidate.r@example.com
+
+Skills:
+Python, Docker, FastAPI, AWS (Basics),
+Model Deployment
+
+Education:
+B.Tech in Artificial Intelligence
+
+Projects:
+- ML Model Deployment on Cloud
+- API-based Model Serving
+
+Experience:
+MLOps Intern
+
+Gap:
+Limited NLP and RAG exposure

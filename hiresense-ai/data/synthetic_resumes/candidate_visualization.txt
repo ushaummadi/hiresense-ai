@@ -1,0 +1,19 @@
+Name: Candidate Q
+Email: candidate.q@example.com
+
+Skills:
+Python, Pandas, Matplotlib, Seaborn,
+Excel, Power BI
+
+Education:
+B.Tech in Data Science
+
+Projects:
+- Business Dashboard Creation
+- Trend Analysis Reports
+
+Experience:
+Data Visualization Intern
+
+Gap:
+No ML or AI experience

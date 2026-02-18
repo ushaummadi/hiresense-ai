@@ -1,0 +1,18 @@
+Name: Candidate BC
+Email: candidate.bc@example.com
+
+Target Role:
+QA Intern
+
+Skills:
+Manual Testing, Test Cases, API Testing
+
+Education:
+B.Tech in Computer Science
+
+Experience:
+QA Intern
+- Tested web applications
+
+Expected Result:
+Should rank low for AI/backend roles

@@ -1,0 +1,20 @@
+Name: Candidate AS
+Email: candidate.as@example.com
+
+Target Role:
+GenAI Intern
+
+Skills:
+Python, LLMs, Prompt Engineering, LangChain,
+Sentence Transformers, ChromaDB
+
+Education:
+B.Tech in Computer Science
+
+Experience:
+GenAI Intern
+- Built RAG-based chatbot
+- Worked on embedding-based retrieval
+
+Expected Result:
+Should rank high for GenAI roles

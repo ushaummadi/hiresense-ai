@@ -1,0 +1,20 @@
+Name: Candidate AT
+Email: candidate.at@example.com
+
+Target Role:
+ML Research Intern
+
+Skills:
+Python, Machine Learning, Deep Learning,
+PyTorch, Research Methods
+
+Education:
+B.Tech in Artificial Intelligence
+
+Experience:
+Research Intern
+- Experimented with ML models
+- Read and implemented research papers
+
+Expected Result:
+Should rank medium-high for AI roles

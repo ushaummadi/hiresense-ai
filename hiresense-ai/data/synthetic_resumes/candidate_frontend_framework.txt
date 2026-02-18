@@ -1,0 +1,21 @@
+Name: Candidate AD
+Email: candidate.ad@example.com
+
+Target Role:
+Frontend Developer Intern
+
+Frontend Skills:
+JavaScript, React (Basics), Angular (Basics)
+
+Backend Skills:
+None
+
+Education:
+B.Tech in Computer Science (Final Year)
+
+Experience:
+Fresher
+- Practiced frontend frameworks through mini projects
+
+Expected Result:
+Should rank medium-low for frontend roles

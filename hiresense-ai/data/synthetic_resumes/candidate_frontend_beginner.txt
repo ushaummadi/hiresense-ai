@@ -1,0 +1,20 @@
+Name: Candidate X
+Email: candidate.x@example.com
+
+Target Role:
+Frontend Intern
+
+Frontend Skills:
+HTML, CSS, Basic JavaScript
+
+Backend Skills:
+None
+
+Education:
+B.Tech in Computer Science (Final Year)
+
+Experience:
+Fresher
+
+Expected Result:
+Should rank medium-low for frontend roles

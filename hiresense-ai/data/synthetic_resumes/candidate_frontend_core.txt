@@ -1,0 +1,23 @@
+Name: Candidate V
+Email: candidate.v@example.com
+
+Target Role:
+AI Engineer Intern
+
+Frontend Skills:
+HTML, CSS, JavaScript, React, Tailwind CSS
+
+Backend Skills:
+None
+
+Education:
+B.Tech in Computer Science
+
+Experience:
+Frontend Developer Intern
+- Built responsive user interfaces using React
+- Integrated frontend with mock APIs
+- Worked on UI/UX improvements
+
+Expected Result:
+Should rank low for AI roles, medium for frontend roles

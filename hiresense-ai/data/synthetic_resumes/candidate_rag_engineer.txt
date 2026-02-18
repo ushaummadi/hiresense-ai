@@ -1,0 +1,21 @@
+Name: Candidate L
+Email: candidate.l@example.com
+
+Skills:
+Python, LLMs, RAG Pipelines, LangChain,
+Sentence Transformers, ChromaDB, FAISS
+
+Education:
+B.Tech in Computer Science
+
+Projects:
+- Legal RAG System for document Q&A
+- Internal Knowledge Base Chatbot
+
+Experience:
+GenAI Intern
+- Built document ingestion and retrieval pipelines
+- Integrated LLMs with vector databases
+
+Gap:
+Limited traditional ML background

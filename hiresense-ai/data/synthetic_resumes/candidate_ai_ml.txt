@@ -1,0 +1,21 @@
+Name: Candidate J
+Email: candidate.j@example.com
+
+Skills:
+Python, Machine Learning, Scikit-learn, Deep Learning, Statistics,
+NumPy, Pandas
+
+Education:
+B.Tech in Artificial Intelligence
+
+Projects:
+- Predictive Modeling for Student Performance
+- ML Pipeline for Loan Approval Prediction
+
+Experience:
+ML Intern
+- Built and evaluated ML models
+- Performed feature engineering and model tuning
+
+Gap:
+No backend or API development experience

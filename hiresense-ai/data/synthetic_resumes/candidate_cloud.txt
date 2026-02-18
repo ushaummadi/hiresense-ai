@@ -1,0 +1,21 @@
+Name: Candidate G
+Email: candidate.g@example.com
+
+Skills:
+Python, FastAPI, AWS (EC2, S3), Docker, Git,
+SQL
+
+Education:
+B.Tech in Computer Engineering
+
+Projects:
+- Cloud-deployed REST API
+- File Upload Service on AWS
+
+Experience:
+Cloud Intern
+- Deployed backend services on AWS
+- Managed Docker containers
+
+Gap:
+Minimal ML, NLP, or embeddings experience

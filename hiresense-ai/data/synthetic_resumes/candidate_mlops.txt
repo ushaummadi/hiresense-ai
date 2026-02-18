@@ -1,0 +1,21 @@
+Name: Candidate H
+Email: candidate.h@example.com
+
+Skills:
+Python, Machine Learning, MLflow, Docker, Git,
+FastAPI, CI/CD (Basics)
+
+Education:
+B.Tech in Artificial Intelligence
+
+Projects:
+- ML Model Training & Tracking Pipeline
+- Model Serving API using FastAPI
+
+Experience:
+MLOps Intern
+- Worked on model lifecycle management
+- Deployed ML models as APIs
+
+Gap:
+Limited NLP and vector database experience

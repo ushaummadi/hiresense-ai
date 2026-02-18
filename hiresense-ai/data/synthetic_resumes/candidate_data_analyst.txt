@@ -1,0 +1,21 @@
+Name: Candidate D
+Email: candidate.d@example.com
+
+Skills:
+Python, Data Analysis, Pandas, NumPy, SQL,
+Matplotlib, Seaborn, Statistics
+
+Education:
+B.Tech in Data Science
+
+Projects:
+- Sales Data Analysis Dashboard
+- Customer Churn Analysis
+
+Experience:
+Data Analyst Intern
+- Analyzed structured datasets
+- Created reports and visualizations
+
+Gap:
+No experience with NLP, embeddings, or vector databases

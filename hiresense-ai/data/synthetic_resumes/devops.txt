@@ -1,0 +1,22 @@
+Name: Candidate AG
+Email: candidate.ag@example.com
+
+Target Role:
+Backend Developer Intern
+
+Backend Skills:
+Python, FastAPI, Docker, Git, Linux
+
+Frontend Skills:
+None
+
+Education:
+B.Tech in Computer Science
+
+Experience:
+Backend & DevOps Intern
+- Containerized backend services
+- Worked with Linux-based deployments
+
+Expected Result:
+Should rank high for backend roles

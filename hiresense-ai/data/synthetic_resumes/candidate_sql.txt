@@ -1,0 +1,19 @@
+Name: Candidate P
+Email: candidate.p@example.com
+
+Skills:
+SQL, Advanced Queries, Python,
+Data Cleaning, Pandas
+
+Education:
+B.Tech in Data Engineering
+
+Projects:
+- Sales Analytics using SQL
+- ETL Pipeline for CSV Data
+
+Experience:
+Data Intern
+
+Gap:
+No AI, NLP, or backend APIs

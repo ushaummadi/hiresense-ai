@@ -1,0 +1,21 @@
+Name: Candidate E
+Email: candidate.e@example.com
+
+Skills:
+Python, Machine Learning, NLP, FastAPI, REST APIs,
+Sentence Transformers, ChromaDB, SQL, Git, Streamlit
+
+Education:
+B.Tech in Computer Science
+
+Projects:
+- AI Resume Screening System using embeddings and vector search
+- Document-based Question Answering (RAG)
+
+Experience:
+AI Engineer Intern
+- Built end-to-end AI applications
+- Integrated AI models with backend APIs
+
+Gap:
+Limited cloud deployment experience

@@ -1,0 +1,19 @@
+Name: Candidate S
+Email: candidate.s@example.com
+
+Skills:
+Python, MLflow, CI/CD, GitHub Actions,
+Docker
+
+Education:
+B.Tech in Computer Science
+
+Projects:
+- Model Versioning and Tracking System
+- CI/CD Pipeline for ML Projects
+
+Experience:
+MLOps Intern
+
+Gap:
+Weak ML modeling and NLP skills

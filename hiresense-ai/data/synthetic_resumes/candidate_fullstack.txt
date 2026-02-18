@@ -1,0 +1,19 @@
+Name: Candidate O
+Email: candidate.o@example.com
+
+Skills:
+Python, FastAPI, React (Basic),
+SQL, HTML, CSS
+
+Education:
+B.Tech in Computer Science
+
+Projects:
+- Full-stack Task Management App
+- REST API with frontend integration
+
+Experience:
+Full-Stack Intern
+
+Gap:
+No ML, NLP, or embeddings

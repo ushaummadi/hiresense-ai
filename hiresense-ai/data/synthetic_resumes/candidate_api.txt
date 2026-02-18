@@ -1,0 +1,21 @@
+Name: Candidate N
+Email: candidate.n@example.com
+
+Skills:
+Python, FastAPI, Django, REST APIs,
+PostgreSQL, Redis, Git
+
+Education:
+B.Tech in Computer Engineering
+
+Projects:
+- Authentication Service API
+- Resume Upload Backend System
+
+Experience:
+Backend Intern
+- Designed and deployed REST APIs
+- Worked with databases and caching
+
+Gap:
+No AI or ML experience

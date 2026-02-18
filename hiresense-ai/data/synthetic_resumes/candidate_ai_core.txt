@@ -1,0 +1,21 @@
+Name: Candidate B
+Email: candidate.b@example.com
+
+Skills:
+Python, Machine Learning, Deep Learning, NLP, PyTorch, TensorFlow,
+NumPy, Pandas, Scikit-learn
+
+Education:
+B.Tech in Computer Science (Final Year)
+
+Projects:
+- NLP Text Classification System using deep learning models
+- Image Classification using CNNs
+
+Experience:
+AI Intern (Academic Projects)
+- Built ML and DL models for text and image data
+- Performed feature engineering and model evaluation
+
+Gap:
+Limited backend and API development experience

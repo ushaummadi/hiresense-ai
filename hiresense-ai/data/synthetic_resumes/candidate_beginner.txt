@@ -1,0 +1,18 @@
+Name: Candidate F
+Email: candidate.f@example.com
+
+Skills:
+Python, Basic Machine Learning, NumPy, Pandas
+
+Education:
+B.Tech in Computer Science (Final Year)
+
+Projects:
+- House Price Prediction using ML
+- Student Performance Analysis
+
+Experience:
+Fresher
+
+Gap:
+No production-level AI or backend experience

@@ -1,0 +1,21 @@
+Name: Candidate C
+Email: candidate.c@example.com
+
+Skills:
+Python, FastAPI, Django, REST APIs, SQL, PostgreSQL,
+Docker, Git
+
+Education:
+B.Tech in Information Technology
+
+Projects:
+- REST API Backend for Job Portal
+- User Authentication Service using FastAPI
+
+Experience:
+Backend Developer Intern
+- Built scalable REST APIs
+- Worked with databases and authentication
+
+Gap:
+Limited machine learning and NLP exposure
