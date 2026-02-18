@@ -36,8 +36,16 @@ with tab1:
             st.warning("Please upload at least one resume.")
         else:
             for f in uploaded_files:
-                candidate_id = upload_resume(f.getvalue(), f.name)
-                st.success(f"Uploaded: {f.name} | Candidate ID: {candidate_id}")
+                try:
+                    if f.size == 0:
+                        st.error(f"{f.name} is empty.")
+                        continue
+
+                    candidate_id = upload_resume(f.getvalue(), f.name)
+                    st.success(f"Uploaded: {f.name} | Candidate ID: {candidate_id}")
+
+                except Exception as e:
+                    st.error(f"Failed to upload {f.name}: {str(e)}")
 
     st.divider()
 
@@ -63,17 +71,21 @@ with tab1:
     top_k = st.slider("Top K Candidates", 3, 30, 10)
 
     if st.button("Rank Candidates"):
-        ranked = rank(
-            job_description,
-            [x.strip() for x in must_have.split(",") if x.strip()],
-            [x.strip() for x in nice_to_have.split(",") if x.strip()],
-            top_k=top_k,
-        )
+        try:
+            ranked = rank(
+                job_description,
+                [x.strip() for x in must_have.split(",") if x.strip()],
+                [x.strip() for x in nice_to_have.split(",") if x.strip()],
+                top_k=top_k,
+            )
 
-        if ranked:
-            st.dataframe(ranked, use_container_width=True)
-        else:
-            st.warning("No candidates found. Upload resumes first.")
+            if ranked:
+                st.dataframe(ranked, use_container_width=True)
+            else:
+                st.warning("No candidates found. Upload resumes first.")
+
+        except Exception as e:
+            st.error(f"Ranking failed: {str(e)}")
 
 # =====================================================
 # TAB 2: AI INTERVIEW
@@ -97,15 +109,17 @@ with tab2:
         st.session_state.interview_done = False
 
     if st.button("Start Interview"):
-        st.session_state.questions = start_interview(
-            job_title_i,
-            job_description_i,
-        )
-        st.session_state.answers = []
-        st.session_state.q_index = 0
-        st.session_state.interview_done = False
-        st.success("Interview started!")
-
+        try:
+            st.session_state.questions = start_interview(
+                job_title_i,
+                job_description_i,
+            )
+            st.session_state.answers = []
+            st.session_state.q_index = 0
+            st.session_state.interview_done = False
+            st.success("Interview started!")
+        except Exception as e:
+            st.error(f"Interview failed to start: {str(e)}")
     if st.session_state.questions and not st.session_state.interview_done:
         current_q = st.session_state.questions[st.session_state.q_index]
         st.info(f"Question {st.session_state.q_index + 1}: {current_q}")
