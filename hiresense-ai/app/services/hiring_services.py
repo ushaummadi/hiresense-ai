@@ -27,7 +27,7 @@ def upload_resume(file_bytes, filename):
         os.remove(path)
         raise ValueError("Invalid or corrupted resume file.")
 
-    if not text or len(text.strip()) < 20:
+    if not text or len(text.strip()) < 10:
         os.remove(path)
         raise ValueError("Resume content could not be extracted.")
     emb = embedder.embed([text])[0]
@@ -66,3 +66,4 @@ def start_interview(job_title, job_desc):
 
 def finish_interview(answers):
     return evaluate_answers(answers)
+
