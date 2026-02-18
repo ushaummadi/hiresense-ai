@@ -24,7 +24,7 @@ class ChromaStore:
         return self.col.query(
             query_embeddings=[query_embedding],
             n_results=top_k,
-            include=["metadatas", "documents", "distances", "ids"]
+            include=["metadatas", "documents", "distances"]
         )
 
     def get(self, candidate_id: str):
@@ -36,3 +36,4 @@ class ChromaStore:
             "document": res["documents"][0],
             "metadata": res["metadatas"][0],
         }
+
