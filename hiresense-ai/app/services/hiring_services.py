@@ -13,13 +13,23 @@ embedder = Embedder()
 store = ChromaStore()
 
 def upload_resume(file_bytes, filename):
+    if not file_bytes or len(file_bytes) == 0:
+        raise ValueError("Uploaded file is empty.")
     candidate_id = str(uuid.uuid4())
     path = os.path.join(UPLOAD_DIR, f"{candidate_id}_{filename}")
 
     with open(path, "wb") as f:
         f.write(file_bytes)
+    
+    try:
+        text = parse_resume(path)
+    except Exception:
+        os.remove(path)
+        raise ValueError("Invalid or corrupted resume file.")
 
-    text = parse_resume(path)
+    if not text or len(text.strip()) < 20:
+        os.remove(path)
+        raise ValueError("Resume content could not be extracted.")
     emb = embedder.embed([text])[0]
 
     store.upsert_candidate(
