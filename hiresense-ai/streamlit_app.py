@@ -107,6 +107,7 @@ with tab2:
         st.session_state.answers = []
         st.session_state.q_index = 0
         st.session_state.interview_done = False
+        st.session_state.evaluation = None
 
     if st.button("Start Interview"):
         try:
@@ -117,6 +118,7 @@ with tab2:
             st.session_state.answers = []
             st.session_state.q_index = 0
             st.session_state.interview_done = False
+            st.session_state.evaluation = None
             st.success("Interview started!")
         except Exception as e:
             st.error(f"Interview failed to start: {str(e)}")
@@ -127,16 +129,49 @@ with tab2:
         answer = st.text_area("Your Answer", key=f"ans_{st.session_state.q_index}")
 
         if st.button("Submit Answer"):
-            st.session_state.answers.append(answer)
-
-            if st.session_state.q_index + 1 < len(st.session_state.questions):
-                st.session_state.q_index += 1
+            if not answer.strip():
+                st.warning("Please enter your answer before submitting.")
             else:
-                evaluation = finish_interview(st.session_state.answers)
-                st.session_state.interview_done = True
-                st.success("Interview Completed!")
-                st.subheader("📊 Evaluation Summary")
-                st.json(evaluation)
+                st.session_state.answers.append(answer)
+
+                if st.session_state.q_index + 1 < len(st.session_state.questions):
+                    st.session_state.q_index += 1
+                else:
+                    evaluation = finish_interview(st.session_state.answers)
+                    st.session_state.interview_done = True
+                    st.success("Interview Completed!")
+                    
+    if st.session_state.interview_done and st.session_state.evaluation:
+
+        evaluation = st.session_state.evaluation
+        score = evaluation.get("communication_score_10", 0)
+
+        st.subheader("📊 Interview Evaluation")
+
+        # Progress Bar
+        st.progress(score / 10)
+
+        # Score Metric
+        st.metric(
+            label="Communication Score",
+            value=f"{score} / 10"
+        )
+
+        # Feedback
+        st.success(evaluation.get("notes", "Evaluation complete."))
+
+        # Optional Raw JSON Toggle
+        with st.expander("🔎 View Raw Evaluation JSON"):
+            st.json(evaluation)
+
+        # Restart Button
+        if st.button("🔄 Restart Interview"):
+            st.session_state.questions = []
+            st.session_state.answers = []
+            st.session_state.q_index = 0
+            st.session_state.interview_done = False
+            st.session_state.evaluation = None
+            st.experimental_rerun()
 
     elif st.session_state.interview_done:
         st.info("Interview already completed. Restart to try again.")
