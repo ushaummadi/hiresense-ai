@@ -105,6 +105,8 @@ def evaluate_answers(answers: List[str]) -> Dict:
 
     try:
         llm_result = llm_evaluate(transcript)
+        if isinstance(llm_result, list):
+            llm_result = llm_result[0] if llm_result else {}
 
         # Optional Hybrid Score
         heuristic = heuristic_score(answers)
@@ -162,3 +164,4 @@ Transcript:
 
     except:
         return "LLM summary generation failed."
+
