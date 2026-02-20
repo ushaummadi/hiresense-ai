@@ -22,8 +22,11 @@ def build_questions(job_title: str, job_description: str) -> List[str]:
 # ----------------------------------------
 
 def heuristic_score(answers: List[str]) -> float:
+    if not answers:
+        return 0.0
+
     length_scores = [min(len(a.split()) / 60, 1.0) for a in answers]
-    return round(sum(length_scores) / max(1, len(length_scores)) * 10, 1)
+    return round(sum(length_scores) / len(length_scores) * 10, 1)
 
 
 # ----------------------------------------
@@ -31,6 +34,7 @@ def heuristic_score(answers: List[str]) -> float:
 # ----------------------------------------
 
 def llm_evaluate(transcript: str) -> Dict:
+
     prompt = f"""
 You are an interview evaluator.
 
@@ -69,12 +73,26 @@ Interview Answers:
     )
 
     result = response.json()
+
     content = result["choices"][0]["message"]["content"]
 
-    # Safe JSON parsing
+    # ------------------------
+    # Safe JSON Normalization
+    # ------------------------
     try:
-        return json.loads(content)
-    except:
+        parsed = json.loads(content)
+
+        # If LLM wraps JSON inside a list → extract first item
+        if isinstance(parsed, list):
+            parsed = parsed[0] if parsed else {}
+
+        # If still not dict → fallback
+        if not isinstance(parsed, dict):
+            raise ValueError("LLM returned non-dict JSON")
+
+        return parsed
+
+    except Exception:
         return {
             "communication_score_10": 0,
             "notes": "LLM response parsing failed."
@@ -95,7 +113,7 @@ def evaluate_answers(answers: List[str]) -> Dict:
 
     transcript = "\n".join(answers)
 
-    # If no API key → fallback to heuristic
+    # No API Key → Heuristic only
     if not GROQ_API_KEY:
         score = heuristic_score(answers)
         return {
@@ -105,13 +123,15 @@ def evaluate_answers(answers: List[str]) -> Dict:
 
     try:
         llm_result = llm_evaluate(transcript)
-        if isinstance(llm_result, list):
-            llm_result = llm_result[0] if llm_result else {}
 
-        # Optional Hybrid Score
+        # Safety check
+        if not isinstance(llm_result, dict):
+            raise ValueError("Invalid LLM result format")
+
         heuristic = heuristic_score(answers)
-        llm_score = llm_result.get("communication_score_10", 0)
+        llm_score = float(llm_result.get("communication_score_10", 0))
 
+        # Hybrid scoring (70% LLM + 30% heuristic)
         final_score = round((heuristic * 0.3) + (llm_score * 0.7), 1)
 
         return {
@@ -136,7 +156,11 @@ def llm_summary(transcript: str) -> str:
         return "LLM summary disabled (no GROQ_API_KEY)."
 
     prompt = f"""
-Summarize this interview transcript in 5 lines with strengths and improvement areas.
+Summarize this interview transcript in 5 lines.
+Include:
+- Strengths
+- Areas of improvement
+- Overall impression
 
 Transcript:
 {transcript}
@@ -162,6 +186,5 @@ Transcript:
         result = response.json()
         return result["choices"][0]["message"]["content"]
 
-    except:
+    except Exception:
         return "LLM summary generation failed."
-
