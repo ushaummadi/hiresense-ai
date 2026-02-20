@@ -138,6 +138,7 @@ with tab2:
                     st.session_state.q_index += 1
                 else:
                     evaluation = finish_interview(st.session_state.answers)
+                    st.session_state.evaluation = evaluation 
                     st.session_state.interview_done = True
                     st.success("Interview Completed!")
                     
@@ -175,3 +176,4 @@ with tab2:
 
     elif st.session_state.interview_done:
         st.info("Interview already completed. Restart to try again.")
+
